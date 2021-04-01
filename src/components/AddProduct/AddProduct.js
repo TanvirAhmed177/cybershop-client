@@ -7,21 +7,7 @@ import Sidebar from "../Sidebar/Sidebar";
 const AddProduct = () => {
   const [imageUrl, setImageUrl] = useState(null);
   const { handleSubmit, register } = useForm();
-  const onSubmit = (data) => {
-    const eventData = {
-      name: data.name,
-      price: data.price,
-      qty: data.qty,
-      imageUrl: imageUrl,
-    };
-    fetch("http://localhost:5000/addProducts", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(eventData),
-    })
-      .then((res) => res.json())
-      .then((data) => {});
-  };
+
   const handleImageUpload = (event) => {
     console.log(event.target.files[0]);
     const imageData = new FormData();
@@ -37,6 +23,22 @@ const AddProduct = () => {
       .catch(function (error) {
         console.log(error);
       });
+  };
+
+  const onSubmit = (data) => {
+    const eventData = {
+      name: data.name,
+      price: data.price,
+      qty: data.qty,
+      imageUrl: imageUrl,
+    };
+    fetch("http://localhost:5000/addProducts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(eventData),
+    })
+      .then((res) => res.json())
+      .then((data) => {});
   };
   return (
     <Container fluid>
