@@ -14,14 +14,14 @@ const Checkout = () => {
   const { price, qty } = product;
 
   useEffect(() => {
-    fetch("http://localhost:5000/products/" + name)
+    fetch("https://rhubarb-pie-83600.herokuapp.com/products/" + name)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [name]);
 
   const handleOrder = () => {
     const newOrder = { ...product, ...loggedInUser, date };
-    fetch("http://localhost:5000/addOrders", {
+    fetch("https://rhubarb-pie-83600.herokuapp.com/addOrders", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newOrder),

@@ -14,7 +14,7 @@ const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://rhubarb-pie-83600.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

@@ -32,7 +32,7 @@ const AddProduct = () => {
       qty: data.qty,
       imageUrl: imageUrl,
     };
-    fetch("http://localhost:5000/addProducts", {
+    fetch("https://rhubarb-pie-83600.herokuapp.com/addProducts", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(eventData),

@@ -6,7 +6,7 @@ import Delete from "../../images/Group 33150.png";
 const Admin = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://rhubarb-pie-83600.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -15,7 +15,7 @@ const Admin = () => {
 
   const handleDelete = (id) => {
     console.log(id);
-    fetch(`http://localhost:5000/deleteProduct/${id}`, {
+    fetch(`https://rhubarb-pie-83600.herokuapp.com/deleteProduct/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
