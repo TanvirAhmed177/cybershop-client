@@ -28,7 +28,9 @@ const Checkout = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        alert(
+          "Your product is being added to orders. Please, check order for more details."
+        );
       });
   };
   return (
@@ -60,11 +62,10 @@ const Checkout = () => {
             </label>
             <DatePicker onChange={onChange} value={date} name="date" />
 
-            <Link to="/orders" className=" text-info text-decoration-none">
-              <Button className="btn btn-warning ml-2" onClick={handleOrder}>
-                Checkout
-              </Button>
-            </Link>
+            <Button className="btn btn-warning ml-2" onClick={handleOrder}>
+              Checkout
+            </Button>
+
             <br />
             <br />
           </div>
