@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Sidebar from "../Sidebar/Sidebar";
+import AdminNavbar from "../AdminNavbar/AdminNavbar";
 import Edit from "../../images/Group 307.png";
 import Delete from "../../images/Group 33150.png";
 const Admin = () => {
@@ -25,7 +25,7 @@ const Admin = () => {
     <Container fluid>
       <Row>
         <Col className="p-0 col-12 ">
-          <Sidebar></Sidebar>
+          <AdminNavbar></AdminNavbar>
         </Col>
       </Row>
       <Row>

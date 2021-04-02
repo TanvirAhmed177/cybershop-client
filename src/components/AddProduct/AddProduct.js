@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { Container, Row, Col } from "react-bootstrap";
-import Sidebar from "../Sidebar/Sidebar";
+import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 const AddProduct = () => {
   const [imageUrl, setImageUrl] = useState(null);
@@ -44,7 +44,7 @@ const AddProduct = () => {
     <Container fluid>
       <Row>
         <Col className="p-0 col-12 ">
-          <Sidebar></Sidebar>
+          <AdminNavbar></AdminNavbar>
           <form onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="name" className="text-light pt-3 pr-2">
               Product Name:{" "}

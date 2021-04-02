@@ -5,7 +5,7 @@ import Grid from "../../images/grid 1.png";
 import Add from "../../images/plus 1.png";
 import Edit from "../../images/edit 1.png";
 
-const Sidebar = () => {
+const AdminNavbar = () => {
   return (
     <div>
       <Navbar
@@ -52,4 +52,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default AdminNavbar;
