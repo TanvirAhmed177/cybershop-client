@@ -50,7 +50,7 @@ const Header = () => {
                 </Link>
                 <Form inline>
                   {loggedInUser.userName ? (
-                    <h5 className="text-light">{loggedInUser.userName}</h5>
+                    <h5 className="text-light mb-0">{loggedInUser.userName}</h5>
                   ) : (
                     <Link
                       to="/login"

@@ -8,10 +8,15 @@ const Products = ({ products }) => {
 
   return (
     <div>
-      <Col className="m-lg-2 m-1 m-sm-2 m-md-3 p-lg-2 p-1 p-sm-2 p-md-3 col-lg-4 col-6 col-sm-8 col-md-4">
+      <Col className="m-lg-2 m-1 m-sm-2 m-md-3 p-lg-2 p-1 p-sm-2 p-md-3 col-lg-4 col-6 col-sm-8 col-md-4 ">
         <Card
           style={{
             width: "18rem",
+            backgroundColor: "#e4eee9",
+            backgroundImage: "linear-gradient(315deg, #e4eee9 0%, #93a5ce 74%)",
+            border: "0px",
+            borderRadius: "10px",
+            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
           }}
           className="p-3"
         >
